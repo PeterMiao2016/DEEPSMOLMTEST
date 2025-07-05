@@ -1,16 +1,15 @@
-# deep_smolm/external/__init__.py
 """
-Expose the DeepSTORM3D code that sits in
-deep_smolm/external/deepstorm3d/DeepSTORM3D
-so that a plain  import DeepSTORM3D  works.
+Expose   import DeepSTORM3D
+for the vendored copy inside deep_smolm/external/deepstorm3d/DeepSTORM3D
 """
-import importlib.util, pathlib, sys
+import importlib, pathlib, sys
 
-_pkg_dir = pathlib.Path(__file__).parent / "deepstorm3d" / "DeepSTORM3D"
-_init_py = _pkg_dir / "__init__.py"
+# folder that *contains* the DeepSTORM3D package
+_vendor_root = pathlib.Path(__file__).with_suffix('') / "deepstorm3d"
 
-# Build a module spec from the real __init__.py
-_spec = importlib.util.spec_from_file_location("DeepSTORM3D", _init_py)
-_mod  = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(_mod)        # execute the real package
-sys.modules["DeepSTORM3D"] = _mod     # register alias
+# put that folder on sys.path (only once)
+sys.path.insert(0, str(_vendor_root))
+
+# import it, then pin it in sys.modules under the canonical name
+_mod = importlib.import_module("DeepSTORM3D")
+sys.modules["DeepSTORM3D"] = _mod

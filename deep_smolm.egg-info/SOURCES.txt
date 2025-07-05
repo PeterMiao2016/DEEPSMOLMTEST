@@ -1,4 +1,3 @@
-README.md
 setup.py
 data_loader/MicroscopyDataloader.py
 data_loader/MicroscopyDataloader_est.py
@@ -17,6 +16,19 @@ deep_smolm/external/deepstorm3d/demo2.py
 deep_smolm/external/deepstorm3d/demo3.py
 deep_smolm/external/deepstorm3d/demo4.py
 deep_smolm/external/deepstorm3d/demo5.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/GenerateTrainingExamples.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/PSF_Learning.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/Testing_Localization_Model.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/Training_Localization_Model.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/__init__.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/assessment_utils.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/cnn_utils.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/data_utils.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/helper_utils.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/loss_utils.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/physics_utils.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/postprocess_utils.py
+deep_smolm/external/deepstorm3d/DeepSTORM3D/vis_utils.py
 logger/__init__.py
 logger/logger.py
 logger/visualization.py
